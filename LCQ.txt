@@ -1,0 +1,69 @@
+############ Lost CHild Quest 
+
+macro LCQ {
+	do ai manual
+	do move ra_in01 380 246
+	do ai on
+	do talknpc 384 246 r1 n
+	do move rachel 114 230
+	do talknpc 114 232 c n
+	call LCQ_1
+}
+
+automacro LCQ_Step2 {
+	NpcNotNear /Suspicious Man/
+	QuestActive 8093
+	InMap rachel,ra_fild01,ra_fild04,ra_fild08,ra_fild12
+	#InMap Payon
+	timeout 30
+	call {	
+		do move ra_fild01 240 325
+		
+	}
+}
+macro LCQ_1 {
+		do move ra_in01 372 201
+		do talknpc 372 200 c n
+		do move rachel 48 230
+		do talknpc 48 236 
+		do move rachel 135 70
+		do talknpc 138 73 
+		do move rachel 122 48
+		do talknpc 120 47
+		do conf lockMap ra_fild01
+		do conf lockMap_x 240
+		do conf lockMap_y 325
+		do conf attackAuto 1
+}
+
+automacro LCQ_Step3 {
+	NpcNear /Suspicious Man/
+	QuestActive 8093
+	InMap ra_fild01
+	timeout 30
+	call {	
+		do move ra_fild01 240 325
+		do talknpc 245 325 c n
+		pause 10
+		do respawn
+		pause 5
+		do conf lockMap none
+		do conf lockMap_x none
+		do conf lockMap_y none
+		do conf attackAuto 2
+
+		
+	}
+}
+macro LCQ_2 {
+	do move ra_in01 380 246
+		do talknpc 384 246  n
+		do move rachel 270 32
+		do talknpc 273 32 n
+		do move ra_in01 380 246
+		do talknpc 384 246  n
+		do move rachel 46 236 
+		do talknpc 48 236  n
+		do move ra_in01 380 246
+		do talknpc 384 246  n
+}

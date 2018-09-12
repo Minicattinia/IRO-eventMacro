@@ -1,0 +1,84 @@
+########################################
+#rachel san
+macro RSQ {
+	do move ra_temple 116 174
+	do talknpc 116 174 c n
+	do move rachel 240 37
+	do talknpc 243 37 c r2
+}
+macro RSQ2 {
+		do talknpc 243 37 r2 r1
+
+}
+macro RSQ3 {
+	do move ra_temple 67 209
+	pause 3
+	do talk resp 1
+	do move que_rachel 60 80
+	do move que_rachel 59 112
+	do move que_rachel 94 138
+	do move que_rachel 132 70
+	call RSQ3.1
+	
+}
+macro RSQ3.1 {
+	
+	do move que_rachel 239 258
+	do move que_rachel 275 332
+	do move que_rachel 26 318
+	pause 3
+	do talk resp 0
+	do move que_rachel 275 332
+	do move que_rachel 26 318
+	pause 3
+	do talk resp 0
+	do move que_rachel 168 18
+	pause 3
+	do talk resp 0
+	call RSQ4
+}
+macro RSQ4 {
+	do move ra_temple 117 174
+	do talknpc 116 174
+	do move ra_temin 171 48
+	do talknpc 170 46 r2 r0 r0
+	do move ra_temple 117 174
+	do talknpc 116 174
+	do move ra_temin 171 48
+	do talknpc 170 46
+	do move ra_temple 117 174
+	do talknpc 116 174
+	pause 2
+	do talknpc 116 174 r0
+	do move ra_temin 277 158
+	do talknpc 277 159 r0 r0 r0 n
+	do talknpc 277 159 r1 n
+	do move ra_temin 133 133
+	do talknpc 134 134 
+	do move ra_temin 134 131
+	do move ra_temin 275 226
+	do move ra_temsky 100 97 
+	do talknpc 99 100 r0 t="rachel" t="long" r0 r0
+	do move ra_temsky 99 8
+	do move ra_temin 275 158 
+	do talknpc 277 159 r0 r0 n
+	do talknpc 294 149 
+	call RSQ5
+	
+}
+macro RSQ5 {
+	do move ra_temin 289 155 
+	pause 10
+	do talk resp 0
+	pause 10
+	do talk resp 0
+	pause 10
+	do move ra_temin 275 158 
+	do talknpc 277 159 r0 n
+	do move 272 143
+	pause 3
+	do talk resp 1
+	do move ra_temin 28 319
+	pause 3
+	do talk resp 1
+}
